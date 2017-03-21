@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>迭代</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function add(a,b) {
+			console.log(a*b);
+			return a*b;
+		}
+		var num=[1,2,3,4,5];
+		var sum=num.reduce(add);
+		console.log(sum);
+
+		Array.matrix=function(rows,cols,init) {
+			var arr=[];
+			for(var i=0;i<rows;i++){
+				var col=[];
+				for(var j=0;j<cols;j++){
+					col[j]=init;
+				}
+				arr[i]=col;
+			}
+			return arr;
+
+		}
+		var two=Array.matrix(3,4,2);
+		console.log(two);
+
+	</script>
+</body>
+</html>
